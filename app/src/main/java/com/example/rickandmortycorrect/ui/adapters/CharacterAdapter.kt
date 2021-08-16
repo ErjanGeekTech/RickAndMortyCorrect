@@ -39,8 +39,9 @@ class CharacterAdapter(
                 getItem(absoluteAdapterPosition)?.apply { onItemClick(id) }
             }
 
-            binding.imageItemCharacter.setOnClickListener{
+            binding.imageItemCharacter.setOnLongClickListener{
                 getItem(absoluteAdapterPosition)?.apply { onItemLongClick(image) }
+                 false
             }
         }
 
