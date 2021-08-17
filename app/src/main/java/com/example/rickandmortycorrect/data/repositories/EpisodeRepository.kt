@@ -14,7 +14,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
-class EpisodeRepository @Inject constructor(val service: EpisodeApiService) {
+class EpisodeRepository @Inject constructor(
+    private val service: EpisodeApiService
+    ) {
 
     fun fetchEpisode(): Flow<PagingData<RickAndMortyEpisode>>{
         return Pager(config = PagingConfig(

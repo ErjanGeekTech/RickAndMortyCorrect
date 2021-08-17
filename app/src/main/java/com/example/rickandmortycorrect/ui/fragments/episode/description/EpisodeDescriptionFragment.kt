@@ -1,7 +1,6 @@
-package com.example.rickandmortycorrect.ui.fragments.episodeDescription
+package com.example.rickandmortycorrect.ui.fragments.episode.description
 
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.rickandmortycorrect.R

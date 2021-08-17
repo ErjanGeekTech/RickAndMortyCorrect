@@ -3,18 +3,18 @@ package com.example.rickandmortycorrect.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.rickandmortycorrect.base.BaseDiffUtilItemCallback
 import com.example.rickandmortycorrect.databinding.ItemEpisodeBinding
 import com.example.rickandmortycorrect.models.RickAndMortyEpisode
 
 class EpisodeAdapter(
     val onItemClick: (id: Int) -> Unit
 ) : PagingDataAdapter<RickAndMortyEpisode, EpisodeAdapter.EpisodeViewHolder>(
-    differCallback
+    BaseDiffUtilItemCallback<RickAndMortyEpisode>()
 ) {
 
-    lateinit var binding: ItemEpisodeBinding
+    private lateinit var binding: ItemEpisodeBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EpisodeViewHolder {
         binding = ItemEpisodeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -35,6 +35,7 @@ class EpisodeAdapter(
                 getItem(absoluteAdapterPosition)?.apply { onItemClick(id) }
             }
         }
+
         fun onBind(rickAndMortyEpisodes: RickAndMortyEpisode) {
             binding.txtNameEpisodes.text = rickAndMortyEpisodes.name
             binding.txtAirDateEpisodes.text = rickAndMortyEpisodes.airDate
@@ -43,24 +44,4 @@ class EpisodeAdapter(
         }
 
     }
-
-    companion object {
-        val differCallback = object : DiffUtil.ItemCallback<RickAndMortyEpisode>() {
-            override fun areItemsTheSame(
-                oldItem: RickAndMortyEpisode,
-                newItem: RickAndMortyEpisode
-            ): Boolean {
-                return oldItem.id == newItem.id
-            }
-
-            override fun areContentsTheSame(
-                oldItem: RickAndMortyEpisode,
-                newItem: RickAndMortyEpisode
-            ): Boolean {
-                return oldItem == newItem
-            }
-
-        }
-    }
-
 }

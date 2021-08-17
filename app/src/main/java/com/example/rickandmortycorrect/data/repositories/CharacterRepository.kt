@@ -13,7 +13,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
-class CharacterRepository @Inject constructor(var service: CharacterApiService) {
+class CharacterRepository @Inject constructor(
+    private val service: CharacterApiService
+    ) {
 
     fun fetchCharacters(): Flow<PagingData<RickAndMortyCharacters>> {
         return Pager(config = PagingConfig(

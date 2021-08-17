@@ -7,7 +7,9 @@ import com.example.rickandmortycorrect.data.repositories.EpisodeRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 @HiltViewModel
-class EpisodeViewModel @Inject constructor(val repository: EpisodeRepository): ViewModel() {
+class EpisodeViewModel @Inject constructor(
+    private val repository: EpisodeRepository
+    ): ViewModel() {
 
     fun fetchEpisode() = repository.fetchEpisode().cachedIn(viewModelScope)
 

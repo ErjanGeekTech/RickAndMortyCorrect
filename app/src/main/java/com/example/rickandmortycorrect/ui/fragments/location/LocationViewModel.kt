@@ -7,7 +7,9 @@ import com.example.rickandmortycorrect.data.repositories.LocationRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 @HiltViewModel
-class LocationViewModel @Inject constructor(val repository: LocationRepository): ViewModel() {
+class LocationViewModel @Inject constructor(
+    private val repository: LocationRepository
+    ): ViewModel() {
 
     fun fetchLocation() = repository.fetchLocation().cachedIn(viewModelScope)
 

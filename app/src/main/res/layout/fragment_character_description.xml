@@ -6,7 +6,7 @@
     android:layout_margin="10dp"
     android:gravity="center"
     android:orientation="horizontal"
-    tools:context=".ui.fragments.characterDescription.CharacterDescriptionFragment">>
+    tools:context=".ui.fragments.character.description.CharacterDescriptionFragment">>
 
     <ImageView
         android:id="@+id/image_description"

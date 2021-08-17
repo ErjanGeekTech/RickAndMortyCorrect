@@ -4,18 +4,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.rickandmortycorrect.base.BaseDiffUtilItemCallback
 import com.example.rickandmortycorrect.databinding.ItemLocationBinding
 import com.example.rickandmortycorrect.models.RickAndMortyLocation
 
 class LocationAdapter(
     val onItemClick: (id: Int) -> Unit
 ) : PagingDataAdapter<RickAndMortyLocation, LocationAdapter.LocationViewHolder>(
-    differCallback
+    BaseDiffUtilItemCallback<RickAndMortyLocation>()
 ) {
 
-    lateinit var binding: ItemLocationBinding
+   private lateinit var binding: ItemLocationBinding
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -45,24 +45,5 @@ class LocationAdapter(
         }
 
 
-    }
-
-    companion object {
-        val differCallback = object : DiffUtil.ItemCallback<RickAndMortyLocation>() {
-            override fun areItemsTheSame(
-                oldItem: RickAndMortyLocation,
-                newItem: RickAndMortyLocation
-            ): Boolean {
-                return oldItem.id == newItem.id
-            }
-
-            override fun areContentsTheSame(
-                oldItem: RickAndMortyLocation,
-                newItem: RickAndMortyLocation
-            ): Boolean {
-                return oldItem == newItem
-            }
-
-        }
     }
 }

@@ -6,7 +6,7 @@
     android:padding="10dp"
     android:orientation="vertical"
     android:background="@color/black"
-    tools:context=".ui.fragments.episodeDescription.EpisodeDescriptionFragment">
+    tools:context=".ui.fragments.episode.description.EpisodeDescriptionFragment">
 
 
 

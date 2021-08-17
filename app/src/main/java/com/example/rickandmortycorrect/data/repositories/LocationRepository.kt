@@ -14,7 +14,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
-class LocationRepository @Inject constructor(val service: LocationApiService) {
+class LocationRepository @Inject constructor(
+    private val service: LocationApiService
+    ) {
 
     fun fetchLocation(): Flow<PagingData<RickAndMortyLocation>>{
         return Pager(config = PagingConfig(

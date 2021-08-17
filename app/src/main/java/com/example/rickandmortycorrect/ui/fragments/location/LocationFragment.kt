@@ -18,7 +18,7 @@ import kotlinx.coroutines.launch
 class LocationFragment : BaseFragment<FragmentLocationBinding, LocationViewModel>(
     R.layout.fragment_location
 ) {
-    override val binding by viewBinding(FragmentLocationBinding::bind)
+   override val binding by viewBinding(FragmentLocationBinding::bind)
     override val viewModel: LocationViewModel by activityViewModels()
     private val locationAdapter = LocationAdapter(this::onItemClick)
 

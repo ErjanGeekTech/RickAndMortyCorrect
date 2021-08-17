@@ -1,4 +1,4 @@
-package com.example.rickandmortycorrect.ui.fragments.locationDescription
+package com.example.rickandmortycorrect.ui.fragments.location.description
 
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
