@@ -1,6 +1,7 @@
 package com.example.rickandmortycorrect.ui.fragments.location
 
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +18,7 @@ import kotlinx.coroutines.launch
 class LocationFragment : BaseFragment<FragmentLocationBinding, LocationViewModel>(
     R.layout.fragment_location
 ) {
-    override val binding by viewBinding(FragmentLocationBinding::bind)
+   override val binding by viewBinding(FragmentLocationBinding::bind)
     override val viewModel: LocationViewModel by activityViewModels()
     private val locationAdapter = LocationAdapter(this::onItemClick)
 
@@ -40,18 +41,14 @@ class LocationFragment : BaseFragment<FragmentLocationBinding, LocationViewModel
 
     private fun fetchLocation() {
         lifecycleScope.launch {
-            viewModel.fetchEpisode().collectLatest {
+            viewModel.fetchLocation().collectLatest {
                 locationAdapter.submitData(it)
             }
         }
     }
 
-    private fun onItemClick(id: Int) {
-        findNavController().navigate(
-            LocationFragmentDirections.actionLocationFragmentToLocationDescriptionFragment(
-                id
-            )
-        )
+    private fun onItemClick (id: Int){
+        findNavController().navigate(LocationFragmentDirections.actionLocationFragmentToLocationDescriptionFragment(id))
     }
 
 }

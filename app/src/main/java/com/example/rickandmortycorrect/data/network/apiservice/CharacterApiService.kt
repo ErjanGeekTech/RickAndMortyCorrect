@@ -11,8 +11,7 @@ interface CharacterApiService {
 
     @GET("api/character")
     suspend fun getListCharacter(
-        @Query("page") page: Int,
-        @Query("limit") size: Int?
+        @Query("page") page: Int
     ): RickAndMortyResponse<RickAndMortyCharacters>
 
     @GET("api/character/{id}")

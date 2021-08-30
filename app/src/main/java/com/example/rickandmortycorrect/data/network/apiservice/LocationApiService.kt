@@ -12,8 +12,7 @@ interface LocationApiService {
 
     @GET("api/location")
     suspend fun getListLocation(
-        @Query("page")  page: Int,
-        @Query("limit") size: Int
+        @Query("page")  page: Int
     ): RickAndMortyResponse<RickAndMortyLocation>
 
     @GET("api/location/{id}")

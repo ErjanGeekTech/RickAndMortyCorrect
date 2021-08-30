@@ -11,7 +11,9 @@ import retrofit2.http.Query
 interface EpisodeApiService {
 
     @GET("api/episode")
-    suspend fun getListEpisode(@Query("page") page: Int, @Query("limit") size: Int): RickAndMortyResponse<RickAndMortyEpisode>
+    suspend fun getListEpisode(
+        @Query("page")  page: Int
+    ): RickAndMortyResponse<RickAndMortyEpisode>
 
     @GET("api/episode/{id}")
     fun episode(

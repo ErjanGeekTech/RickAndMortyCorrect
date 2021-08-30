@@ -1,6 +1,7 @@
 package com.example.rickandmortycorrect.ui.fragments.episode
 
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,6 +10,7 @@ import com.example.rickandmortycorrect.R
 import com.example.rickandmortycorrect.base.BaseFragment
 import com.example.rickandmortycorrect.databinding.FragmentEpisodeBinding
 import com.example.rickandmortycorrect.ui.adapters.EpisodeAdapter
+import com.example.rickandmortycorrect.ui.fragments.character.CharacterFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
