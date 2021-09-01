@@ -1,7 +1,6 @@
 package com.example.rickandmortycorrect.ui.fragments.character
 
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,7 +33,6 @@ class CharacterFragment :
         fetchCharacters()
     }
 
-
     override fun setupViews() {
         super.setupViews()
         setupRecycler()
@@ -53,7 +51,6 @@ class CharacterFragment :
         lifecycleScope.launch {
             viewModel.fetchCharacters().collectLatest {
                 characterAdapter.submitData(it)
-
             }
         }
     }
@@ -64,6 +61,7 @@ class CharacterFragment :
             CharacterFragmentDirections.actionCharacterFragmentToCharacterDescriptionFragment(id)
         )
     }
+
     private fun onItemLongClick(photo: String) {
         findNavController().navigate(
             CharacterFragmentDirections.actionCharacterFragmentToDlalogFragment(photo)

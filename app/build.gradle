@@ -97,6 +97,9 @@ dependencies {
 
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"
 
+    //optional dependency for RxJava support
+    implementation "androidx.paging:paging-rxjava2-ktx:3.0.0-alpha03"
+
     // View binding property delegate
     def view_binding_property_delegate = '1.4.6'
 
@@ -110,6 +113,16 @@ dependencies {
 
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
     kapt "androidx.hilt:hilt-compiler:1.0.0-alpha03"
+
+    //Room
+    def room_version = "2.3.0"
+
+    implementation("androidx.room:room-ktx:$room_version")
+
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:$room_version")
+
+    implementation 'com.jakewharton.timber:timber:5.0.1'
 
 
 }

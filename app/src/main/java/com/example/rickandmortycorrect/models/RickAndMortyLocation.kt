@@ -1,24 +1,27 @@
 package com.example.rickandmortycorrect.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.example.rickandmortycorrect.base.IBaseDiffModel
 import com.google.gson.annotations.SerializedName
-
+@Entity
 data class RickAndMortyLocation(
+    @PrimaryKey
     @SerializedName("id")
-    override var id: Int,
+    override val id: Int,
 
     @SerializedName("name")
-    var name: String,
+    val name: String,
 
     @SerializedName("type")
-    var type: String,
+    val type: String,
 
     @SerializedName("dimension")
-    var dimension: String,
+    val dimension: String,
 
     @SerializedName("url")
-    var url: String,
+    val url: String,
 
     @SerializedName("created")
-    var created: String
+    val created: String
 ) : IBaseDiffModel
