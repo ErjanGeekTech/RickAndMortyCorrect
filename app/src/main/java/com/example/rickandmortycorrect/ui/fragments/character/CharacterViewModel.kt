@@ -1,10 +1,8 @@
 package com.example.rickandmortycorrect.ui.fragments.character
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
-import androidx.paging.PagingSource
 import androidx.paging.cachedIn
 import com.example.rickandmortycorrect.data.repositories.CharacterRepository
 import com.example.rickandmortycorrect.models.RickAndMortyCharacters
