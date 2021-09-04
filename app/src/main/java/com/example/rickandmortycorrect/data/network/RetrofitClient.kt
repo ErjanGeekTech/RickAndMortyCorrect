@@ -1,5 +1,6 @@
 package com.example.rickandmortycorrect.data.network
 
+import com.example.rickandmortycorrect.constants.Constants.BASE_URL
 import com.example.rickandmortycorrect.data.network.apiservice.CharacterApiService
 import com.example.rickandmortycorrect.data.network.apiservice.EpisodeApiService
 import com.example.rickandmortycorrect.data.network.apiservice.LocationApiService
@@ -25,11 +26,10 @@ class RetrofitClient {
 
 
     val retrofit = Retrofit.Builder()
-        .baseUrl("https://rickandmortyapi.com/")
+        .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
-
 
     fun provideCharacterApiService(): CharacterApiService {
         return retrofit.create(CharacterApiService::class.java)
