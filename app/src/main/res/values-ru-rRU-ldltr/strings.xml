@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="rick_and_morty_characters">Персонажи</string>
+    <string name="rick_and_morty_locations">Локации</string>
+    <string name="rick_and_morty_episodes">Епизоды</string>
+    <string name="rick_and_morty_character_detail">Персонаж</string>
+    <string name="rick_and_morty_location_detail">Локация</string>
+    <string name="rick_and_morty_episode_detail">Епизод</string>
+
+
+</resources>

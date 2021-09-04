@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">RickAndMortyCorrect</string>
+    <string name="app_name" translatable="false">RickAndMortyCorrect</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="rick_and_morty_characters">Characters</string>
+    <string name="rick_and_morty_locations">Locations</string>
+    <string name="rick_and_morty_episodes">Episodes</string>
+    <string name="rick_and_morty_character_detail">Сharacter</string>
+    <string name="rick_and_morty_location_detail">Location</string>
+    <string name="rick_and_morty_episode_detail">Episode</string>
+
 </resources>

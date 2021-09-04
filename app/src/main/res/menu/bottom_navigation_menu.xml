@@ -3,13 +3,13 @@
 
     <item
         android:id="@+id/characterFragment"
-        android:title="characters"/>
+        android:title="@string/rick_and_morty_characters"/>
     <item
         android:id="@+id/episodeFragment"
-        android:title="episodes"/>
+        android:title="@string/rick_and_morty_episodes"/>
     <item
         android:id="@+id/locationFragment"
-        android:title="locations"/>
+        android:title="@string/rick_and_morty_locations"/>
 
 
 </menu>
