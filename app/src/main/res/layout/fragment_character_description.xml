@@ -6,7 +6,7 @@
     android:layout_margin="10dp"
     android:gravity="center"
     android:orientation="horizontal"
-    tools:context=".ui.fragments.character.description.CharacterDescriptionFragment">>
+    tools:context=".ui.fragments.character.description.CharacterDescriptionFragment">
 
     <ImageView
         android:id="@+id/image_description"
@@ -15,8 +15,7 @@
     <TextView
         android:textSize="22sp"
         android:id="@+id/text_name_description"
-        android:textColor="@color/white"
-        android:text=""
+        android:textColor="@color/RickAndMortyText"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

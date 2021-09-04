@@ -3,41 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+    android:background="@color/RickAndMortyTheBackground"
     android:orientation="vertical"
-    android:background="@color/black"
+    android:padding="10dp"
     tools:context=".ui.fragments.episode.description.EpisodeDescriptionFragment">
 
 
+    <TextView
+        android:id="@+id/txt_name_episodes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/RickAndMortyText"
+        android:textSize="18sp" />
 
-        <TextView
-            android:text="name"
-            android:textSize="18sp"
-            android:id="@+id/txt_name_episodes"
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:text="air_date"
-            android:id="@+id/txt_air_date_episodes"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:text="episodes"
-            android:id="@+id/txt_episodes_episodes"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:text="created"
-            android:id="@+id/txt_created_episodes"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/txt_air_date_episodes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/RickAndMortyText"
+        android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/txt_episodes_episodes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/RickAndMortyText"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txt_created_episodes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/RickAndMortyText"
+        android:textSize="16sp" />
 
 </LinearLayout>

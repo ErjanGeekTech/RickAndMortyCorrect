@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:padding="10dp"
-        android:background="@color/black"
+        android:background="@color/RickAndMortyItemListAdapter"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,28 +17,28 @@
             android:text="name"
             android:textSize="18sp"
             android:id="@+id/txt_name_location"
-            android:textColor="@color/white"
+            android:textColor="@color/RickAndMortyText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
             android:text="type"
             android:id="@+id/type_location_txt"
             android:textSize="18sp"
-            android:textColor="@color/white"
+            android:textColor="@color/RickAndMortyText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
             android:text="dimension"
             android:id="@+id/txt_dimension_location"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="@color/RickAndMortyText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
             android:text="created"
             android:id="@+id/txt_created_location"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="@color/RickAndMortyText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
