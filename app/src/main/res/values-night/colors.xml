@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="RickAndMortyText">#FFFFFFFF</color>
+    <color name="RickAndMortyTheBackground">#191818</color>
+    <color name="RickAndMortyItemListAdapter">#FF000000</color>
+    <color name="BottomNavigation">#1C1919</color>
+    <color name="black">#FF000000</color>
+    <color name="ToolbarBackground">#FF000000</color>
+
+
+</resources>
