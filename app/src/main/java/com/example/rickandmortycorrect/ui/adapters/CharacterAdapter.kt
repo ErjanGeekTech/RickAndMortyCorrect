@@ -15,8 +15,6 @@ class CharacterAdapter(
 ) : PagingDataAdapter<RickAndMortyCharacters, CharacterAdapter.CharacterViewHolder>(
     BaseDiffUtilItemCallback<RickAndMortyCharacters>()
 ) {
-
-
     private lateinit var binding: ItemCharacterBinding
 
 
@@ -47,11 +45,13 @@ class CharacterAdapter(
 
 
         fun onBind(rickAndMortyCharacters: RickAndMortyCharacters) {
-            Glide
-                .with(binding.imageItemCharacter)
-                .load(rickAndMortyCharacters.image)
-                .into(binding.imageItemCharacter)
-            binding.textItemCharacter.text = rickAndMortyCharacters.name
+            with(binding) {
+                Glide
+                    .with(imageItemCharacter)
+                    .load(rickAndMortyCharacters.image)
+                    .into(imageItemCharacter)
+                textItemCharacter.text = rickAndMortyCharacters.name
+            }
         }
 
     }

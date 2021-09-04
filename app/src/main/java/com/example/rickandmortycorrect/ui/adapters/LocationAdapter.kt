@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rickandmortycorrect.base.BaseDiffUtilItemCallback
-import com.example.rickandmortycorrect.databinding.ItemEpisodeBinding
 import com.example.rickandmortycorrect.databinding.ItemLocationBinding
 import com.example.rickandmortycorrect.models.RickAndMortyLocation
 
@@ -29,7 +28,7 @@ class LocationAdapter(
         getItem(position)?.let { holder.onBind(it) }
     }
 
-  inner  class LocationViewHolder(private val binding: ItemLocationBinding) :
+    inner class LocationViewHolder(private val binding: ItemLocationBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
@@ -39,10 +38,13 @@ class LocationAdapter(
         }
 
         fun onBind(rickAndMortyLocations: RickAndMortyLocation) {
-            binding.txtNameLocation.text = rickAndMortyLocations.name
-            binding.typeLocationTxt.text = rickAndMortyLocations.type
-            binding.txtDimensionLocation.text = rickAndMortyLocations.dimension
-            binding.txtCreatedLocation.text = rickAndMortyLocations.created
+            with(binding) {
+                txtNameLocation.text = rickAndMortyLocations.name
+                typeLocationTxt.text = rickAndMortyLocations.type
+                txtDimensionLocation.text = rickAndMortyLocations.dimension
+                txtCreatedLocation.text = rickAndMortyLocations.created
+            }
+
         }
 
 

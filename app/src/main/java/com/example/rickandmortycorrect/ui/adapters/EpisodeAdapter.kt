@@ -37,10 +37,12 @@ class EpisodeAdapter(
         }
 
         fun onBind(rickAndMortyEpisodes: RickAndMortyEpisode) {
-            binding.txtNameEpisodes.text = rickAndMortyEpisodes.name
-            binding.txtAirDateEpisodes.text = rickAndMortyEpisodes.airDate
-            binding.txtEpisodesEpisodes.text = rickAndMortyEpisodes.episode
-            binding.txtCreatedEpisodes.text = rickAndMortyEpisodes.created
+            with(binding) {
+                txtNameEpisodes.text = rickAndMortyEpisodes.name
+                txtAirDateEpisodes.text = rickAndMortyEpisodes.airDate
+                txtEpisodesEpisodes.text = rickAndMortyEpisodes.episode
+                txtCreatedEpisodes.text = rickAndMortyEpisodes.created
+            }
         }
 
     }
