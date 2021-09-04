@@ -5,14 +5,13 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
+import com.example.rickandmortycorrect.constants.Constants.DEFAULT_PAGE_INDEX
 import com.example.rickandmortycorrect.data.db.AppDatabase
 import com.example.rickandmortycorrect.data.network.apiservice.LocationApiService
 import com.example.rickandmortycorrect.models.RemoteKeys
 import com.example.rickandmortycorrect.models.RickAndMortyLocation
 import java.io.IOException
 import javax.inject.Inject
-
-val DEFAULT_PAGE_INDEX_LOCATION: Int? = 1
 
 @ExperimentalPagingApi
 class LocationMediator @Inject constructor(
@@ -44,7 +43,7 @@ class LocationMediator @Inject constructor(
                     appDatabase.getRepoDao().clearRemoteKeys()
                     appDatabase.locationDao().clearRemoteKeys()
                 }
-                val prevKey = if (page == DEFAULT_PAGE_INDEX_LOCATION) null else page - 1
+                val prevKey = if (page == DEFAULT_PAGE_INDEX) null else page - 1
                 val nextKey = if (isEndOfList) null else page + 1
                 val keys = response.results.map {
                     RemoteKeys(repoId = it.id.toString(), prevKey = prevKey, nextKey = nextKey)
