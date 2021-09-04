@@ -1,5 +1,6 @@
 package com.example.rickandmortycorrect.data.repositories
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
@@ -28,7 +29,7 @@ class CharacterRepository @Inject constructor(
                 call: Call<RickAndMortyCharacters>,
                 response: Response<RickAndMortyCharacters>
             ) {
-                character.value = response.body()
+                    character.value = response.body()
             }
 
             override fun onFailure(call: Call<RickAndMortyCharacters>, t: Throwable) {
