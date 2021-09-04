@@ -5,16 +5,13 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
-import com.bumptech.glide.load.HttpException
+import com.example.rickandmortycorrect.constants.Constants.DEFAULT_PAGE_INDEX
 import com.example.rickandmortycorrect.data.db.AppDatabase
 import com.example.rickandmortycorrect.data.network.apiservice.CharacterApiService
 import com.example.rickandmortycorrect.models.RemoteKeys
 import com.example.rickandmortycorrect.models.RickAndMortyCharacters
 import java.io.IOException
-import java.util.concurrent.TimeUnit
 import javax.inject.Inject
-
-val DEFAULT_PAGE_INDEX: Int? = 1
 
 @ExperimentalPagingApi
 class CharactersMediator @Inject constructor(
