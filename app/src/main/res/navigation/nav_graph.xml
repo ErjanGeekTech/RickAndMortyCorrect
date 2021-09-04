@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/characterFragment"
         android:name="com.example.rickandmortycorrect.ui.fragments.character.CharacterFragment"
-        android:label="Characters"
+        android:label="@string/rick_and_morty_characters"
         tools:layout="@layout/fragment_character" >
         <action
             android:id="@+id/action_characterFragment_to_characterDescriptionFragment"
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/episodeFragment"
         android:name="com.example.rickandmortycorrect.ui.fragments.episode.EpisodeFragment"
-        android:label="Episodes"
+        android:label="@string/rick_and_morty_episodes"
         tools:layout="@layout/fragment_episode" >
         <action
             android:id="@+id/action_episodeFragment_to_episodeDescriptionFragment"
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.example.rickandmortycorrect.ui.fragments.location.LocationFragment"
-        android:label="Locations"
+        android:label="@string/rick_and_morty_locations"
         tools:layout="@layout/fragment_location" >
         <action
             android:id="@+id/action_locationFragment_to_locationDescriptionFragment"
@@ -38,7 +38,7 @@
     <fragment
         android:id="@+id/characterDescriptionFragment"
         android:name="com.example.rickandmortycorrect.ui.fragments.character.description.CharacterDescriptionFragment"
-        android:label="Character"
+        android:label="@string/rick_and_morty_character_detail"
         tools:layout="@layout/fragment_character_description" >
         <argument
             android:name="get_id"
@@ -47,7 +47,7 @@
     <fragment
         android:id="@+id/episodeDescriptionFragment"
         android:name="com.example.rickandmortycorrect.ui.fragments.episode.description.EpisodeDescriptionFragment"
-        android:label="Episode"
+        android:label="@string/rick_and_morty_episode_detail"
         tools:layout="@layout/fragment_episode_description" >
         <argument
             android:name="get_id"
@@ -56,7 +56,7 @@
     <fragment
         android:id="@+id/locationDescriptionFragment"
         android:name="com.example.rickandmortycorrect.ui.fragments.location.description.LocationDescriptionFragment"
-        android:label="Location"
+        android:label="@string/rick_and_morty_location_detail"
         tools:layout="@layout/fragment_location_description" >
         <argument
             android:name="get_id_location"
