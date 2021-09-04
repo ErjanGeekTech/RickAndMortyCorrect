@@ -5,6 +5,7 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
+import com.example.rickandmortycorrect.constants.Constants.DEFAULT_PAGE_INDEX
 import com.example.rickandmortycorrect.data.db.AppDatabase
 import com.example.rickandmortycorrect.data.network.apiservice.EpisodeApiService
 import com.example.rickandmortycorrect.models.RemoteKeys
@@ -12,7 +13,6 @@ import com.example.rickandmortycorrect.models.RickAndMortyEpisode
 import java.io.IOException
 import javax.inject.Inject
 
-const val DEFAULT_PAGE_INDEX_EPISODE = 1
 
 @ExperimentalPagingApi
 class EpisodeMediator @Inject constructor(
@@ -74,7 +74,7 @@ class EpisodeMediator @Inject constructor(
             }
             LoadType.APPEND -> {
                 val remoteKeys = getLastRemoteKey(state)
-                remoteKeys?.nextKey?.plus(1) ?: DEFAULT_PAGE_INDEX_EPISODE
+                remoteKeys?.nextKey?.plus(1) ?: DEFAULT_PAGE_INDEX
             }
             LoadType.PREPEND -> {
                 MediatorResult.Success(endOfPaginationReached = true)
